@@ -7,3 +7,7 @@ Android: The Android sample app is available at https://sdk.spritzinc.com/androi
 
 
 JavaScript: The JavaScript documentation and links to SDK files are at https://spritzinc.atlassian.net/wiki/display/jssdk/JavaScript+SDK+Documentation 
+
+Peter:
+My phone number is 424-832-6960.
+My email address is kuhanmuniam@ucla.edu
