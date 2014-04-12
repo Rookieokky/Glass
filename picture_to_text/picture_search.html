@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<script src="ocrad.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		
+
+			});
+		</script>
+		<input type="file" onchange="function OCRImage(image){
+					var canvas = document.createElement('canvas')
+					canvas.width  = image.naturalWidth;
+					canvas.height = image.naturalHeight;
+					canvas.getContext('2d').drawImage(image, 0, 0)
+					return OCRAD(canvas)
+				}
+
+				function OCRPath(url, callback){
+					var image = new Image()
+					image.src = url;
+					image.onload = function(){ callback(OCRImage(image)) }
+				}
+
+				function OCRFile(file, callback){
+					var reader = new FileReader();
+					reader.onload = function(){ OCRPath(reader.result, callback); }
+					reader.readAsDataURL(file)
+				}
+				OCRFile(this.files[0], function(text){
+				$('#textarea').val(text);
+		})">
+		<textarea id="textarea"></textarea>
+	</body>	
+</html>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49242140-1', 'roraku.com');
+  ga('send', 'pageview');
+
+</script>
