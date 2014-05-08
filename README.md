@@ -21,3 +21,10 @@ http://ec2-54-186-34-253.us-west-2.compute.amazonaws.com/
 54.186.34.253
 username: ec2-user
 private key: glass_server_key.ppk
+
+Java OCR : 
+http://sourceforge.net/projects/javaocr/
+http://roncemer.com/software-development/java-ocr/
+
+Dictionary :
+https://raw2.github.com/sujithps/Dictionary/master/Oxford%20English%20Dictionary.txt
